@@ -1,3 +1,7 @@
 run这两个指令
 cmd （run as administrator) > chkdsk c:/    
 sfc /scannow
+DISM /Online /Cleanup-Image /RestoreHealth
+Windows+X > Click Windows Powershell (Admin) > Copy the below command and paste in Powershell and Enter
+get-appxpackage Microsoft.Windows.Photos | remove-appxpackage
+Get-AppxPackage -allusers Microsoft.Windows.Photos | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register “$($_.InstallLocation)\AppXManifest.xml”}
