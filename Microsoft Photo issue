@@ -1,0 +1,3 @@
+run这两个指令
+cmd （run as administrator) > chkdsk c:/    
+sfc /scannow
